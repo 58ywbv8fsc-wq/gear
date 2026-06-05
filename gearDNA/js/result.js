@@ -79,7 +79,7 @@ speed + "%";
    マウスおすすめ
 ------------------- */
 
-fetch("/data/mice.json")
+fetch("../data/mice.json")
 
 .then(response => {
 
