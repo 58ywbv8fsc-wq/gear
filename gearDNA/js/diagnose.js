@@ -21,8 +21,7 @@ form.addEventListener(
             score += 30;
         }
 
-        alert("score=" + score);
-
+        
         localStorage.setItem(
             "score",
             score
