@@ -123,19 +123,6 @@
     "grip": ["palm", "claw"],
     "image": "../images/xlite-v3.png",
     "link": "https://www.pulsar.gg"
-  },
-
-  {
-    "name": "G304",
-    "weight": 99,
-    "length": 116,
-    "width": 62,
-    "height": 38,
-    "shape": "symmetrical",
-    "size": "small",
-    "hump": "rear",
-    "grip": ["claw", "fingertip"],
-    "image": "../images/g304.png",
-    "link": "https://www.logitechg.com"
   }
+
 ]
