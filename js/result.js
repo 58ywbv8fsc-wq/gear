@@ -48,6 +48,12 @@ document.getElementById(
 ).style.width =
 speed + "%";
 
+console.log(
+    competitive,
+    control,
+    speed
+);
+
 /* ------------------
    おすすめ計算
 ------------------- */
@@ -75,7 +81,8 @@ fetch("../data/mice.json")
         mouse =>
         mouse.name === currentMouse
     );
-
+    console.log(currentMouse);
+    console.log(current);
     let results = [];
 
     data.forEach(mouse => {
@@ -171,10 +178,11 @@ fetch("../data/mice.json")
 
     results
         .slice(0, 5)
-        .forEach(mouse => {
+        .forEach((mouse, index) => {
 
         recommendations.innerHTML += `
-        <div class="gear-card">
+        <a href="${mouse.link}" target="_blank" class="gear-link">
+        <div class="gear-card ${index === 0 ? "best-match" : ""}">
 
             <img
              class="gear-image"
