@@ -9,7 +9,7 @@
     "size": "medium",
     "hump": "rear",
     "grip": ["claw", "fingertip"],
-    "image": "../images/mayax.png",
+    "image": "../images/MayaX.png",
     "link": "https://lamzu.com"
   },
 
@@ -93,7 +93,7 @@
     "size": "small",
     "hump": "rear",
     "grip": ["claw", "fingertip"],
-    "image": "../images/atkf1.png",
+    "image": "../images/atk.png",
     "link": "https://www.atk.store"
   },
 
