@@ -1,0 +1,141 @@
+[
+  {
+    "name": "Maya X",
+    "weight": 47,
+    "length": 122,
+    "width": 64,
+    "height": 39,
+    "shape": "symmetrical",
+    "size": "medium",
+    "hump": "rear",
+    "grip": ["claw", "fingertip"],
+    "image": "../images/mayax.png",
+    "link": "https://lamzu.com"
+  },
+
+  {
+    "name": "Viper V3 Pro",
+    "weight": 54,
+    "length": 127,
+    "width": 64,
+    "height": 40,
+    "shape": "symmetrical",
+    "size": "medium",
+    "hump": "center",
+    "grip": ["claw", "fingertip"],
+    "image": "../images/viper-v3-pro.png",
+    "link": "https://www.razer.com"
+  },
+
+  {
+    "name": "ZOWIE U2",
+    "weight": 60,
+    "length": 123,
+    "width": 65,
+    "height": 39,
+    "shape": "symmetrical",
+    "size": "medium",
+    "hump": "rear",
+    "grip": ["claw"],
+    "image": "../images/u2.png",
+    "link": "https://zowie.benq.com"
+  },
+
+  {
+    "name": "OP1 8K",
+    "weight": 50,
+    "length": 118,
+    "width": 60,
+    "height": 37,
+    "shape": "symmetrical",
+    "size": "small",
+    "hump": "rear",
+    "grip": ["claw", "fingertip"],
+    "image": "../images/op1.png",
+    "link": "https://endgamegear.com"
+  },
+
+  {
+    "name": "Sora V2",
+    "weight": 39,
+    "length": 121,
+    "width": 63,
+    "height": 38,
+    "shape": "symmetrical",
+    "size": "medium",
+    "hump": "rear",
+    "grip": ["claw", "fingertip"],
+    "image": "../images/Sorav2.png",
+    "link": "https://ninjutso.com"
+  },
+
+  {
+    "name": "GPX 2",
+    "weight": 60,
+    "length": 125,
+    "width": 63,
+    "height": 40,
+    "shape": "symmetrical",
+    "size": "medium",
+    "hump": "center",
+    "grip": ["claw", "palm"],
+    "image": "../images/gpx2.png",
+    "link": "https://www.logitechg.com"
+  },
+
+  {
+    "name": "ATK F1 Ultimate",
+    "weight": 38,
+    "length": 118,
+    "width": 62,
+    "height": 37,
+    "shape": "symmetrical",
+    "size": "small",
+    "hump": "rear",
+    "grip": ["claw", "fingertip"],
+    "image": "../images/atkf1.png",
+    "link": "https://www.atk.store"
+  },
+
+  {
+    "name": "DeathAdder V3 Pro",
+    "weight": 63,
+    "length": 128,
+    "width": 68,
+    "height": 44,
+    "shape": "ergonomic",
+    "size": "large",
+    "hump": "center",
+    "grip": ["palm", "claw"],
+    "image": "../images/dav3.png",
+    "link": "https://www.razer.com"
+  },
+
+  {
+    "name": "Xlite V3 Large",
+    "weight": 55,
+    "length": 126,
+    "width": 66,
+    "height": 43,
+    "shape": "ergonomic",
+    "size": "large",
+    "hump": "center",
+    "grip": ["palm", "claw"],
+    "image": "../images/xlite-v3.png",
+    "link": "https://www.pulsar.gg"
+  },
+
+  {
+    "name": "G304",
+    "weight": 99,
+    "length": 116,
+    "width": 62,
+    "height": 38,
+    "shape": "symmetrical",
+    "size": "small",
+    "hump": "rear",
+    "grip": ["claw", "fingertip"],
+    "image": "../images/g304.png",
+    "link": "https://www.logitechg.com"
+  }
+]

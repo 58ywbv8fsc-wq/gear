@@ -1,0 +1,340 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+    font-family:sans-serif;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 20px 80px;
+    border-bottom:1px solid #222;
+}
+
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+.hero{
+    width:100%;
+    min-height:90vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:100px;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h1{
+    font-size:90px;
+    line-height:1;
+}
+
+.hero-text p{
+    margin-top:30px;
+    font-size:20px;
+    color:#aaa;
+}
+
+.start-btn{
+    display:inline-block;
+
+    margin-top:40px;
+    padding:15px 40px;
+
+    background:white;
+    color:black;
+
+    text-decoration:none;
+    border-radius:10px;
+
+    font-weight:bold;
+}
+
+.hero-image{
+    width:50%;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:600px;
+}
+
+.features{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:100px;
+}
+
+.card{
+    width:350px;
+    background:#151515;
+
+    border:1px solid #222;
+
+    padding:30px;
+    border-radius:20px;
+}
+
+.card h2{
+    margin-bottom:20px;
+}
+
+.card p{
+    color:#999;
+}
+.diagnosis{
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:100px 20px;
+}
+
+.diagnosis-container{
+    width:800px;
+    background:#111;
+    border:1px solid #222;
+    border-radius:25px;
+    padding:50px;
+}
+
+.diagnosis-container h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.diagnosis-container p{
+    color:#888;
+    margin-bottom:40px;
+}
+
+.input-group{
+    margin-bottom:30px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+select{
+    width:100%;
+    padding:15px;
+    background:#181818;
+    border:1px solid #333;
+    color:white;
+    border-radius:10px;
+}
+
+.checkbox-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.checkbox-grid label{
+    background:#181818;
+    padding:15px;
+    border-radius:10px;
+}
+
+.analyze-btn{
+    width:100%;
+    height:60px;
+    margin-top:20px;
+
+    border:none;
+    border-radius:12px;
+
+    background:white;
+    color:black;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+.result{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.result-card{
+    width:700px;
+    background:#111;
+    border:1px solid #222;
+    border-radius:20px;
+    padding:50px;
+    text-align:center;
+}
+.stats{
+
+    margin-top:40px;
+
+    margin-bottom:40px;
+}
+
+.stat{
+
+    margin-bottom:25px;
+}
+
+.stat span{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    text-align:left;
+
+    font-weight:600;
+}
+
+.bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:#222;
+
+    border-radius:999px;
+
+    overflow:hidden;
+}
+
+.fill{
+
+    height:100%;
+
+    width:0%;
+
+    background:white;
+
+    transition:1s;
+}
+.recommendation-list{
+
+    display:flex;
+    gap:20px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+.gear-card{
+
+    width:280px;
+
+    background:#111;
+
+    border:1px solid #222;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.gear-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#00ffff;
+    box-shadow: 
+    0 0 20px #00ffff55;
+
+}
+
+.gear-image{
+
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:contain;
+    display:block;
+
+}
+
+.match{
+
+    color:#00ffff;
+
+    font-weight:bold;
+    font-weight:700;
+}
+
+.buy-btn{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+
+    background:#00ffff;
+
+    color:black;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+.diagnosis{
+    width: 600px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.diagnosis select,
+.diagnosis button{
+    padding: 10px;
+    font-size: 16px;
+}
+
+#results{
+    margin-top: 20px;
+}
