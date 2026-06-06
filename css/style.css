@@ -321,3 +321,20 @@ select{
     font-weight:bold;
 
 }
+.diagnosis{
+    width: 600px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.diagnosis select,
+.diagnosis button{
+    padding: 10px;
+    font-size: 16px;
+}
+
+#results{
+    margin-top: 20px;
+}

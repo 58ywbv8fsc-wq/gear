@@ -9,7 +9,7 @@
     "size": "medium",
     "hump": "rear",
     "grip": ["claw", "fingertip"],
-    "image": "../images/mayax.jpg",
+    "image": "../images/mayax.png",
     "link": "https://lamzu.com"
   },
 
@@ -65,7 +65,7 @@
     "size": "medium",
     "hump": "rear",
     "grip": ["claw", "fingertip"],
-    "image": "../images/sora-v2.png",
+    "image": "../images/Sorav2.png",
     "link": "https://ninjutso.com"
   },
 
@@ -93,7 +93,7 @@
     "size": "small",
     "hump": "rear",
     "grip": ["claw", "fingertip"],
-    "image": "../images/atk-f1.png",
+    "image": "../images/atkf1.png",
     "link": "https://www.atk.store"
   },
 

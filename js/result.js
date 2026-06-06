@@ -1,40 +1,13 @@
-
-const score = Number(
-    localStorage.getItem("score")
-);
+const currentMouse =
+localStorage.getItem("currentMouse");
 
 const grip =
 localStorage.getItem("grip");
-
-const scoreText =
-document.getElementById("scoreText");
-
-const playerType =
-document.getElementById("playerType");
 
 const recommendations =
 document.getElementById(
     "recommendations"
 );
-
-/* ------------------
-   スコア表示
-------------------- */
-
-scoreText.innerText =
-`Score : ${score}`;
-
-if (score >= 30) {
-
-    playerType.innerText =
-    "Competitive Claw";
-
-} else {
-
-    playerType.innerText =
-    "Casual Player";
-
-}
 
 /* ------------------
    プレイヤー傾向バー
@@ -76,7 +49,7 @@ document.getElementById(
 speed + "%";
 
 /* ------------------
-   マウスおすすめ
+   おすすめ計算
 ------------------- */
 
 fetch("../data/mice.json")
@@ -97,9 +70,21 @@ fetch("../data/mice.json")
 
 .then(data => {
 
+    const current =
+    data.find(
+        mouse =>
+        mouse.name === currentMouse
+    );
+
     let results = [];
 
     data.forEach(mouse => {
+
+        if (
+            mouse.name === currentMouse
+        ) {
+            return;
+        }
 
         let match = 0;
 
@@ -122,32 +107,44 @@ fetch("../data/mice.json")
 
         }
 
-        /* 軽量マウス */
+        /* 重量の近さ */
 
-        if (mouse.weight < 60) {
+        const weightDiff =
+        Math.abs(
+            mouse.weight -
+            current.weight
+        );
 
-            match += 20;
+        match += Math.max(
+            0,
+            20 - weightDiff
+        );
 
-        }
+        /* 幅の近さ */
 
-        /* スコア反映 */
+        const widthDiff =
+        Math.abs(
+            mouse.width -
+            current.width
+        );
 
-        if (
-            score >= 30 &&
-            mouse.weight < 55
-        ) {
+        match += Math.max(
+            0,
+            15 - widthDiff
+        );
 
-            match += 15;
+        /* 高さの近さ */
 
-        }
+        const heightDiff =
+        Math.abs(
+            mouse.height -
+            current.height
+        );
 
-        /* 超軽量ボーナス */
-
-        if (mouse.weight < 50) {
-
-            match += 10;
-
-        }
+        match += Math.max(
+            0,
+            10 - heightDiff
+        );
 
         /* 最大100に制限 */
 
@@ -159,7 +156,7 @@ fetch("../data/mice.json")
         results.push({
 
             ...mouse,
-            match: match
+            match: Math.round(match)
 
         });
 
@@ -177,30 +174,26 @@ fetch("../data/mice.json")
         .forEach(mouse => {
 
         recommendations.innerHTML += `
-
         <div class="gear-card">
 
             <img
-                class="gear-image"
-                src="${mouse.image}"
-                alt="${mouse.name}"
+             class="gear-image"
+             src="${mouse.image}"
+             alt="${mouse.name}"
             >
 
-            <h3>
-                ${mouse.name}
-            </h3>
+            <h3>${mouse.name}</h3>
 
             <p class="match">
-                Match :
-                ${mouse.match}%
+              Match : ${mouse.match}%
             </p>
 
             <p>
-                Weight :
-                ${mouse.weight}g
+              Weight : ${mouse.weight}g
             </p>
 
         </div>
+
 
         `;
 

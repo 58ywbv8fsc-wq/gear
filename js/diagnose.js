@@ -23,8 +23,8 @@ form.addEventListener(
 
 
         localStorage.setItem(
-            "score",
-            score
+            "currentMouse",
+            currentMouse
         );
         localStorage.setItem(
             "grip",
