@@ -101,11 +101,10 @@ nav a{
 .card{
     width:350px;
     background:#151515;
-
     border:1px solid #222;
-
     padding:30px;
     border-radius:20px;
+    box-sizing:border-box;
 }
 
 .card h2{
@@ -378,6 +377,11 @@ select{
 ==================== */
 
 @media (max-width: 768px){
+    .card{
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+    }
 
     body{
         padding: 0px;
