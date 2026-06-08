@@ -9,8 +9,7 @@ form.addEventListener(
 
         let score = 0;
 
-        const grip =
-        document.getElementById("grip").value;
+        
 
         const currentMouse =
         document.getElementById(
@@ -26,10 +25,7 @@ form.addEventListener(
             "currentMouse",
             currentMouse
         );
-        localStorage.setItem(
-            "grip",
-            grip
-        );
+       
 
 
         window.location.href =
