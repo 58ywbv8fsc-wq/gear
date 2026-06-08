@@ -38,3 +38,20 @@ form.addEventListener(
     }
     
 );
+const mouseList = document.getElementById("mouseList");
+
+fetch("data/mice.json")
+.then(res => res.json())
+.then(mice => {
+
+    mice.forEach(mouse => {
+
+        const option = document.createElement("option");
+
+        option.value = mouse.name;
+
+        mouseList.appendChild(option);
+
+    });
+
+});
