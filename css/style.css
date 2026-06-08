@@ -384,6 +384,21 @@ select{
     color:white;
     box-sizing:border-box;
 }
+.search-input{
+    width:100%;
+    padding:16px;
+    border:1px solid #555;
+    border-radius:12px;
+    background:#111;
+    color:white;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.search-input:focus{
+    outline:none;
+    border-color:#888;
+}
 /* ====================
    Smartphone
 ==================== */
