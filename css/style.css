@@ -169,7 +169,7 @@ select{
     background:#181818;
     padding:15px;
     border-radius:10px;
-    display:flex
+    display:flex;
     justify-content:space-between;
     align-items:center;
 }
