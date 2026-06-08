@@ -372,7 +372,15 @@ select{
     padding:4px 10px;
     border-radius:999px;
 }
-
+.input-group input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #333;
+    background:#111;
+    color:white;
+    box-sizing:border-box;
+}
 /* ====================
    Smartphone
 ==================== */
