@@ -40,7 +40,7 @@ form.addEventListener(
 );
 const mouseList = document.getElementById("mouseList");
 
-fetch("data/mice.json")
+fetch("../data/mice.json")
 .then(res => res.json())
 .then(mice => {
 
