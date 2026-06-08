@@ -14,6 +14,7 @@ form.addEventListener(
         const currentMouse =
         document.getElementById(
             "currentMouse"
+            console.log("currentMouse =", document.getElementById("currentMouse"));
         ).value;
 
         if(currentMouse.toLowerCase().includes("maya x")){
