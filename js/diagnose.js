@@ -17,7 +17,8 @@ form.addEventListener(
             "currentMouse"
         ).value;
 
-        if(currentMouse === "Maya X"){
+        if(currentMouse === toLowerCase()
+    .includes("maya x"){
             score += 30;
         }
 
