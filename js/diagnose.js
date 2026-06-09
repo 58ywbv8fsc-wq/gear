@@ -21,7 +21,7 @@ form.addEventListener(
         );
       
 
-        if(!currentMouseElemnt){
+        if(!currentMouseElement){
             aleert("currentMouse が見つかりません");
             return;
         }
