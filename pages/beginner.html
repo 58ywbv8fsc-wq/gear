@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初心者向けマウス診断</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>初めてのゲーミングマウス診断</h1>
+        <p>3つの質問でおすすめを表示します。</p>
+
+        <form id="beginnerForm">
+
+            <label>手の長さ</label>
+            <select id="handSize">
+                <option value="small">～17cm</option>
+                <option value="medium">17～19cm</option>
+                <option value="large">19cm～</option>
+            </select>
+
+            <label>FPSをプレイする？</label>
+            <select id="fps">
+                <option value="yes">はい</option>
+                <option value="no">いいえ</option>
+            </select>
+
+            <label>予算</label>
+            <select id="budget">
+                <option value="5000">～5000円</option>
+                <option value="10000">～10000円</option>
+                <option value="99999">制限なし</option>
+            </select>
+
+            <button type="submit">
+                診断する
+            </button>
+
+        </form>
+
+        <div id="results"></div>
+
+    </div>
+
+    <script src="../js/beginner.js"></script>
+
+</body>
+</html>
