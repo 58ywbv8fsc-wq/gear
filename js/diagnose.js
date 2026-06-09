@@ -17,19 +17,19 @@ form.addEventListener(
         );
         console.log(
             "currentMouse =", 
-            document.getElementById("currentMouse")
+            currentMouse
         );
       
 
-        if(!currentMouseElement){
-            aleert("currentMouse が見つかりません");
+        if(!currentMouse){
+            alert("currentMouse が見つかりません");
             return;
         }
 
 
         localStorage.setItem(
             "currentMouse",
-            currentMouse
+            currentMouse.value
         );
        
 
