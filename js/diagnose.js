@@ -14,15 +14,16 @@ form.addEventListener(
         const currentMouse =
         document.getElementById(
             "currentMouse"
-        ).value;
+        );
         console.log(
             "currentMouse =", 
             document.getElementById("currentMouse")
         );
       
 
-        if(currentMouse.toLowerCase().includes("maya x")){
-            score += 30;
+        if(!currentMouseElemnt){
+            aleert("currentMouse が見つかりません");
+            return;
         }
 
 
