@@ -31,8 +31,10 @@ form.addEventListener(
             "currentMouse",
             currentMouse.value
         );
-       
-
+        localStorage.setItem(
+            "grip",
+            grip.value
+        );
 
         window.location.href =
         "result.html";
