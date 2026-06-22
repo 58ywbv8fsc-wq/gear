@@ -399,6 +399,46 @@ select{
     outline:none;
     border-color:#888;
 }
+/* ===== 初心者診断 ===== */
+
+#results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.mouse-card{
+    width: 260px;
+    background: #111;
+    border: 1px solid #2b2b2b;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.mouse-card:hover{
+    transform: translateY(-5px);
+}
+
+.mouse-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.mouse-card h3{
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+.mouse-card p{
+    color: #aaa;
+}
 /* ====================
    Smartphone
 ==================== */
