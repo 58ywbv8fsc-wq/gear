@@ -469,6 +469,29 @@ select{
     text-decoration:none;
     font-weight:bold;
 }
+#b-btn {
+    display: block;
+    width: 180px;
+    height: 55px;
+    margin: 20px auto 0;
+    border: none;
+    border-radius: 16px;
+    background: #f2f2f2;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#b-btn:hover {
+    background: #e5e5e5;
+    transform: translateY(-2px);
+}
+
+#b-btn:active {
+    transform: translateY(0);
+}
 /* ====================
    Smartphone
 ==================== */
