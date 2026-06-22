@@ -58,7 +58,7 @@ form.addEventListener("submit", async (e) => {
         <h2>おすすめマウス</h2>
 
         ${top3.map(mouse => `
-            <div class="mouse-card">
+            <div class="gear-card">
                 <img src="${mouse.image}" alt="${mouse.name}">
                 <h3>${mouse.name}</h3>
                 <p>${mouse.weight}g</p>
