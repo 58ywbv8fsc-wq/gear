@@ -8,11 +8,13 @@
     "shape": "symmetrical",
     "size": "medium",
     "hump": "rear",
-    "grip": ["claw", "fingertip"],
+    "grip": [
+      "claw",
+      "fingertip"
+    ],
     "image": "../images/MayaX.png",
     "link": "https://shop.hid-labs.com/product/lamzu-maya-x/"
   },
-
   {
     "name": "Viper V3 Pro",
     "weight": 54,
@@ -22,11 +24,13 @@
     "shape": "symmetrical",
     "size": "medium",
     "hump": "center",
-    "grip": ["claw", "fingertip"],
+    "grip": [
+      "claw",
+      "fingertip"
+    ],
     "image": "../images/viper-v3-pro.png",
     "link": "https://www.razer.com/jp-jp/gaming-mice/razer-viper-v3-pro?srsltid=AfmBOopfwkZVbmJB4WNMGVxmmXOxGQF6yKbROiCfemSnIXbDmlMc4hHN"
   },
-
   {
     "name": "ZOWIE U2",
     "weight": 60,
@@ -36,11 +40,12 @@
     "shape": "symmetrical",
     "size": "medium",
     "hump": "rear",
-    "grip": ["claw"],
+    "grip": [
+      "claw"
+    ],
     "image": "../images/u2.png",
     "link": "https://www.amazon.co.jp/ZOWIE-%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%9E%E3%82%A6%E3%82%B9%EF%BC%88%E5%B7%A6%E5%8F%B3%E5%AF%BE%E7%A7%B0-3395%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC-%E3%82%A8%E3%83%B3%E3%83%8F%E3%83%B3%E3%82%B9%E3%83%88%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%83%AC%E3%82%B7%E3%83%BC%E3%83%90%E3%83%BC%E4%BB%98%E5%B1%9E-%E3%83%97%E3%83%A9%E3%82%B0%EF%BC%86%E3%83%97%E3%83%AC%E3%82%A4/dp/B0CZ3F8BCR/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.eBzg-YWPjKmR7sSlMX_clE82B2-nipKyKQpfGVuTeYKDKWWIOh1Q04ddfJzDQFdRp1roK-vBy4xs0QbXwwIpmGTv1u-N-kvYuyfdESzYh2FxTz4sPAfXJ6BDFzLibkXVf3FdJfVWKktrE6du63H6in1fzCCF6d_of9xYbB09-la9EozyCptNdhZZGCUbdlyhN0nr7fE5RTDHbvIGbPsDbgasYF7t3pyE8q1hT6gbwigufFhWA8WjvXoLSOjX3-YuKixlRfVURu8L9y2eF6xrFcZCoJmr8CEVvHgipauJ4v4.vy-vA0mJsPtOo4QhGldYItLeLx23jC8b8nnfpLJ09XA&dib_tag=se&keywords=U2&qid=1780724976&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"
   },
-
   {
     "name": "OP1 8K",
     "weight": 50,
@@ -50,11 +55,13 @@
     "shape": "symmetrical",
     "size": "small",
     "hump": "rear",
-    "grip": ["claw", "fingertip"],
+    "grip": [
+      "claw",
+      "fingertip"
+    ],
     "image": "../images/op1.png",
     "link": "https://www.amazon.co.jp/dp/B0CSP93VN5/"
   },
-
   {
     "name": "Sora V2",
     "weight": 39,
@@ -64,11 +71,13 @@
     "shape": "symmetrical",
     "size": "medium",
     "hump": "rear",
-    "grip": ["claw", "fingertip"],
+    "grip": [
+      "claw",
+      "fingertip"
+    ],
     "image": "../images/Sorav2.png",
     "link": "https://www.fumoshop.com/products/ninjutso-mouse-sora-v2-white?srsltid=AfmBOopTjWRtAAAHCRnkyYtH6vTME4BOceWyHqcB6SipTjgZFxTq87JQ"
   },
-
   {
     "name": "GPX 2",
     "weight": 60,
@@ -78,11 +87,13 @@
     "shape": "symmetrical",
     "size": "medium",
     "hump": "center",
-    "grip": ["claw", "palm"],
+    "grip": [
+      "claw",
+      "palm"
+    ],
     "image": "../images/gpx2.png",
     "link": "https://gaming.logicool.co.jp/ja-jp/shop/p/pro-x2-superlight-wireless-mouse"
   },
-
   {
     "name": "ATK F1 Ultimate",
     "weight": 38,
@@ -92,11 +103,13 @@
     "shape": "symmetrical",
     "size": "small",
     "hump": "rear",
-    "grip": ["claw", "fingertip"],
+    "grip": [
+      "claw",
+      "fingertip"
+    ],
     "image": "../images/atk.png",
     "link": "https://www.amazon.co.jp/%E8%B6%85%E8%BB%BD%E9%87%8F%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%9E%E3%82%A6%E3%82%B9-Blazing-Ultimate-%E6%9C%80%E5%A4%A7%E3%83%9D%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%888000Hz-ULTIMATE/dp/B0D6XBSSRC?th=1"
   },
-
   {
     "name": "DeathAdder V3 Pro",
     "weight": 63,
@@ -106,11 +119,13 @@
     "shape": "ergonomic",
     "size": "large",
     "hump": "center",
-    "grip": ["palm", "claw"],
+    "grip": [
+      "palm",
+      "claw"
+    ],
     "image": "../images/Dav3.png",
     "link": "https://www.razer.com/jp-jp/gaming-mice/razer-deathadder-v3-pro?srsltid=AfmBOor5aR3CidMXlzW7C2u_Ss4Coi1yzoG0KttI6w_NPC0LMYS4I32W"
   },
-
   {
     "name": "Xlite V3 Large",
     "weight": 55,
@@ -120,8 +135,75 @@
     "shape": "ergonomic",
     "size": "large",
     "hump": "center",
-    "grip": ["palm", "claw"],
+    "grip": [
+      "palm",
+      "claw"
+    ],
     "image": "../images/xlitev3.png",
     "link": "https://www.pulsar.gg/products/xlite-v3-large-gaming-mouse?srsltid=AfmBOorE0nDEdHZDYqG6Vz9LXjzDw-omHqhF6gKug18FJXRDvkpynRqq"
+  },
+  {
+    "name": "G304 LIGHTSPEED",
+    "weight": 99,
+    "length": 116.6,
+    "width": 62.15,
+    "height": 38.2,
+    "shape": "symmetrical",
+    "size": "small",
+    "hump": "center",
+    "grip": [
+      "claw",
+      "fingertip"
+    ],
+    "image": "../images/mouse-placeholder.svg",
+    "link": "https://gaming.logicool.co.jp/ja-jp/shop/p/g304-lightspeed-wireless-gaming-mouse"
+  },
+  {
+    "name": "PRO X SUPERLIGHT 2 DEX",
+    "weight": 60,
+    "length": 125.8,
+    "width": 67.7,
+    "height": 43.9,
+    "shape": "ergonomic",
+    "size": "large",
+    "hump": "center",
+    "grip": [
+      "palm",
+      "claw"
+    ],
+    "image": "../images/mouse-placeholder.svg",
+    "link": "https://www.logitechg.com/en-gb/products/gaming-mice/pro-x-superlight-2-dex.910-007358.html"
+  },
+  {
+    "name": "DeathAdder V3 HyperSpeed",
+    "weight": 55,
+    "length": 122.2,
+    "width": 64.8,
+    "height": 41.3,
+    "shape": "ergonomic",
+    "size": "medium",
+    "hump": "center",
+    "grip": [
+      "palm",
+      "claw"
+    ],
+    "image": "../images/mouse-placeholder.svg",
+    "link": "https://www.razer.com/gaming-mice/razer-deathadder-v3-hyperspeed"
+  },
+  {
+    "name": "Viper V3 HyperSpeed",
+    "weight": 82,
+    "length": 127.1,
+    "width": 63.9,
+    "height": 39.9,
+    "shape": "symmetrical",
+    "size": "medium",
+    "hump": "center",
+    "grip": [
+      "claw",
+      "fingertip"
+    ],
+    "image": "../images/mouse-placeholder.svg",
+    "link": "https://www.razer.com/gaming-mice/razer-viper-v3-hyperspeed"
   }
 ]
