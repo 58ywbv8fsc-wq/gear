@@ -43,6 +43,7 @@ form.addEventListener(
     
 );
 const mouseList = document.getElementById("mouseList");
+const usedMouseList = document.getElementById("usedMouseList");
 
 fetch("../data/mice.json")
 .then(res => res.json())
@@ -51,10 +52,16 @@ fetch("../data/mice.json")
     mice.forEach(mouse => {
 
         const option = document.createElement("option");
-
         option.value = mouse.name;
-
         mouseList.appendChild(option);
+
+        const label = document.createElement("label");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.name = "usedMice";
+        checkbox.value = mouse.name;
+        label.append(checkbox, ` ${mouse.name}`);
+        usedMouseList.appendChild(label);
 
     });
 
