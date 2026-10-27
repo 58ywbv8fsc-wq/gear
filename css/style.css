@@ -1033,3 +1033,24 @@ select{
         padding:16px;
     }
 }
+
+
+@media (min-width:769px){
+    .hero:not(:has(.hero-image img)) .hero-text{
+        width:min(100%,1100px);
+    }
+}
+
+@media (min-width:1200px){
+    .features{
+        display:grid;
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:24px;
+        padding:80px clamp(32px,7vw,100px);
+    }
+
+    .card{
+        width:auto;
+        min-width:0;
+    }
+}
