@@ -1,47 +1,27 @@
-const form =
-document.getElementById("gearForm");
+const form = document.getElementById("gearForm");
 
-form.addEventListener(
-    "submit",
-    function(e){
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-        e.preventDefault();
+    const currentMouse = document.getElementById("currentMouse");
+    const grip = document.getElementById("grip");
+    const usedMice = Array.from(
+        form.querySelectorAll('input[name="usedMice"]:checked'),
+        checkbox => checkbox.value
+    );
 
-        let score = 0;
-
-        
-
-        const currentMouse =
-        document.getElementById(
-            "currentMouse"
-        );
-        console.log(
-            "currentMouse =", 
-            currentMouse
-        );
-      
-
-        if(!currentMouse){
-            alert("currentMouse が見つかりません");
-            return;
-        }
-
-
-        localStorage.setItem(
-            "currentMouse",
-            currentMouse.value
-        );
-        localStorage.setItem(
-            "grip",
-            grip.value
-        );
-
-        window.location.href =
-        "result.html";
-
+    if (!currentMouse) {
+        alert("currentMouse が見つかりません");
+        return;
     }
-    
-);
+
+    localStorage.setItem("currentMouse", currentMouse.value);
+    localStorage.setItem("grip", grip.value);
+    localStorage.setItem("usedMice", JSON.stringify(usedMice));
+
+    window.location.href = "result.html";
+});
+
 const mouseList = document.getElementById("mouseList");
 const usedMouseList = document.getElementById("usedMouseList");
 const keyboardList = document.getElementById("currentKeyboard");
@@ -72,7 +52,7 @@ Promise.all([
         checkbox.type = "checkbox";
         checkbox.name = "usedMice";
         checkbox.value = mouse.name;
-        label.append(checkbox, ` ${mouse.name}`);
+        label.append(checkbox, " " + mouse.name);
         usedMouseList.appendChild(label);
     });
 
