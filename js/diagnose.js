@@ -45,7 +45,7 @@ function addSelectOptions(select, items) {
 Promise.all([
     fetch("../data/mice.json").then(res => res.json()),
     fetch("../data/keyboards.json").then(res => res.json()),
-    fetch("../data/mousepads.json").then(res => res.json())
+    fetch("../data/mousepads.json?v=20261027-mousepads-10").then(res => res.json())
 ]).then(([mice, keyboards, mousepads]) => {
 
     mice.forEach(mouse => {
