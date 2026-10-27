@@ -1,5 +1,47 @@
 [
-  { "name": "PCMK 2 HE TKL" },
-  { "name": "Wooting 80HE" },
-  { "name": "Apex Pro TKL" }
+  {
+    "name": "PCMK 2 HE TKL"
+  },
+  {
+    "name": "Wooting 80HE"
+  },
+  {
+    "name": "Apex Pro TKL"
+  },
+  {
+    "name": "GravaStar Mercury K1 Pro"
+  },
+  {
+    "name": "GravaStar Mercury K1"
+  },
+  {
+    "name": "GravaStar Mercury K1 Lite"
+  },
+  {
+    "name": "GravaStar Mercury K98 Pro"
+  },
+  {
+    "name": "AIM1 瞬 MATATAKI"
+  },
+  {
+    "name": "Razer Huntsman V3 Pro Tenkeyless 8KHz"
+  },
+  {
+    "name": "Logitech PRO X TKL RAPID"
+  },
+  {
+    "name": "Keychron Q1 HE"
+  },
+  {
+    "name": "SteelSeries Apex Pro TKL Gen 3"
+  },
+  {
+    "name": "Wooting 60HE+"
+  },
+  {
+    "name": "DrunkDeer A75 Pro"
+  },
+  {
+    "name": "ASUS ROG Falchion Ace HFX"
+  }
 ]
