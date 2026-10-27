@@ -13,6 +13,65 @@ try {
 
 const recommendations = document.getElementById("recommendations");
 const usedMouseSummary = document.getElementById("usedMouseSummary");
+const mouseProfileSummary = document.getElementById("mouseProfileSummary");
+const scoreText = document.getElementById("scoreText");
+const playerType = document.getElementById("playerType");
+
+const gripLabels = {
+    claw: "Claw",
+    palm: "Palm",
+    fingertip: "Fingertip"
+};
+const shapeLabels = {
+    symmetrical: "左右対称",
+    ergonomic: "右手エルゴ"
+};
+const sizeLabels = {
+    small: "小型",
+    medium: "中型",
+    large: "大型"
+};
+const humpLabels = {
+    rear: "後部寄り",
+    center: "中央寄り",
+    front: "前方寄り"
+};
+
+function formatNumber(value) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) {
+        return "未登録";
+    }
+    return Number.isInteger(number) ? String(number) : String(Math.round(number * 10) / 10);
+}
+
+function getMostCommon(items, key) {
+    const counts = new Map();
+    items.forEach(item => {
+        const value = item[key];
+        if (value) {
+            counts.set(value, (counts.get(value) || 0) + 1);
+        }
+    });
+
+    return Array.from(counts.entries())
+        .sort((a, b) => b[1] - a[1])[0]?.[0] || "";
+}
+
+function getRatio(items, key, value) {
+    if (!value || items.length === 0) {
+        return 0;
+    }
+    return items.filter(item => item[key] === value).length / items.length;
+}
+
+function dimensionPoints(value, target, tolerance, points) {
+    const candidate = Number(value);
+    if (!Number.isFinite(candidate) || !Number.isFinite(target)) {
+        return 0;
+    }
+    return Math.max(0, points * (1 - Math.abs(candidate - target) / tolerance));
+}
 
 /* ------------------
    プレイヤー傾向バー
@@ -22,13 +81,13 @@ let competitive = 90;
 let control = 80;
 let speed = 85;
 
-if (grip === "Palm") {
+if (grip.toLowerCase() === "palm") {
     competitive = 75;
     control = 95;
     speed = 60;
 }
 
-if (grip === "Fingertip") {
+if (grip.toLowerCase() === "fingertip") {
     competitive = 85;
     control = 65;
     speed = 95;
@@ -48,7 +107,7 @@ if (usedMouseSummary) {
    おすすめ計算
 ------------------- */
 
-fetch("../data/mice.json")
+fetch("../data/mice.json?v=20261027-mouse-result-details")
 .then(response => {
     if (!response.ok) {
         throw new Error("JSONの読み込み失敗");
@@ -68,20 +127,64 @@ fetch("../data/mice.json")
     const profileMice = Array.from(
         new Map([current, ...historyMice].map(mouse => [mouse.name, mouse])).values()
     );
-    const average = key => profileMice.reduce(
-        (sum, mouse) => sum + Number(mouse[key]),
-        0
-    ) / profileMice.length;
+
+    const average = key => {
+        const values = profileMice
+            .map(mouse => Number(mouse[key]))
+            .filter(Number.isFinite);
+        return values.length
+            ? values.reduce((sum, value) => sum + value, 0) / values.length
+            : NaN;
+    };
 
     const profile = {
         weight: average("weight"),
+        length: average("length"),
         width: average("width"),
         height: average("height")
     };
 
-    const profileShapeRatio = shape => profileMice.filter(
-        mouse => mouse.shape === shape
-    ).length / profileMice.length;
+    const preferredShape = getMostCommon(profileMice, "shape");
+    const preferredSize = getMostCommon(profileMice, "size");
+    const preferredHump = getMostCommon(profileMice, "hump");
+    const preferredGrip = gripLabels[grip.toLowerCase()] || grip;
+
+    if (scoreText) {
+        scoreText.textContent = "マウスの使用履歴を加味したプロフィール";
+    }
+
+    if (playerType) {
+        playerType.textContent = [
+            preferredGrip,
+            sizeLabels[preferredSize] || preferredSize,
+            shapeLabels[preferredShape] || preferredShape,
+            humpLabels[preferredHump] || preferredHump
+        ].filter(Boolean).join("・");
+    }
+
+    if (mouseProfileSummary) {
+        const currentDimensions = [
+            formatNumber(current.length),
+            formatNumber(current.width),
+            formatNumber(current.height)
+        ].join(" × ");
+        const profileDimensions = [
+            formatNumber(profile.length),
+            formatNumber(profile.width),
+            formatNumber(profile.height)
+        ].join(" × ");
+
+        const historyText = historyMice.length
+            ? " / 過去の使用履歴: " + historyMice.map(mouse => mouse.name).join("、")
+            : "";
+
+        mouseProfileSummary.textContent =
+            "基準マウス: " + current.name +
+            "（" + formatNumber(current.weight) + "g・" + currentDimensions + "mm）" +
+            historyText +
+            "。診断プロフィール平均: " + formatNumber(profile.weight) + "g・" +
+            profileDimensions + "mm。";
+    }
 
     const results = [];
 
@@ -90,19 +193,17 @@ fetch("../data/mice.json")
             return;
         }
 
-        let match = 0;
+        const supportsGrip = Array.isArray(mouse.grip) &&
+            mouse.grip.some(value => String(value).toLowerCase() === grip.toLowerCase());
 
-        if (
-            mouse.grip &&
-            mouse.grip.map(value => value.toLowerCase()).includes(grip.toLowerCase())
-        ) {
-            match += 50;
-        }
-
-        match += Math.max(0, 20 - Math.abs(mouse.weight - profile.weight));
-        match += Math.max(0, 15 - Math.abs(mouse.width - profile.width));
-        match += Math.max(0, 10 - Math.abs(mouse.height - profile.height));
-        match += Math.round(profileShapeRatio(mouse.shape) * 5);
+        let match = supportsGrip ? 35 : 0;
+        match += dimensionPoints(mouse.weight, profile.weight, 35, 20);
+        match += dimensionPoints(mouse.length, profile.length, 25, 12);
+        match += dimensionPoints(mouse.width, profile.width, 18, 12);
+        match += dimensionPoints(mouse.height, profile.height, 15, 8);
+        match += Math.round(getRatio(profileMice, "shape", mouse.shape) * 5);
+        match += Math.round(getRatio(profileMice, "size", mouse.size) * 4);
+        match += Math.round(getRatio(profileMice, "hump", mouse.hump) * 4);
         match = Math.min(match, 100);
 
         results.push({
@@ -146,10 +247,31 @@ fetch("../data/mice.json")
         match.textContent = "Match : " + mouse.match + "%";
         card.appendChild(match);
 
-        const weight = document.createElement("p");
-        weight.textContent = "Weight : " + mouse.weight + "g";
-        card.appendChild(weight);
+        const details = document.createElement("div");
+        details.className = "gear-specs";
 
+        const dimensions = [
+            formatNumber(mouse.length),
+            formatNumber(mouse.width),
+            formatNumber(mouse.height)
+        ].join(" × ");
+
+        [
+            "重量: " + formatNumber(mouse.weight) + "g",
+            "寸法: " + dimensions + "mm",
+            "形状: " + (shapeLabels[mouse.shape] || mouse.shape || "未登録") +
+                " / " + (sizeLabels[mouse.size] || mouse.size || "未登録") +
+                " / ハンプ" + (humpLabels[mouse.hump] || mouse.hump || "未登録"),
+            "持ち方: " + (Array.isArray(mouse.grip)
+                ? mouse.grip.map(value => gripLabels[String(value).toLowerCase()] || value).join("・")
+                : "未登録")
+        ].forEach(text => {
+            const line = document.createElement("p");
+            line.textContent = text;
+            details.appendChild(line);
+        });
+
+        card.appendChild(details);
         link.appendChild(card);
         recommendations.appendChild(link);
     });
