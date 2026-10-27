@@ -19,7 +19,7 @@ form.addEventListener("submit", function(e) {
     localStorage.setItem("grip", grip.value);
     localStorage.setItem("usedMice", JSON.stringify(usedMice));
 
-    window.location.href = "result.html";
+    window.location.href = "result.html?v=20261027-mouse-result-details";
 });
 
 const mouseList = document.getElementById("mouseList");
@@ -43,7 +43,7 @@ function addSelectOptions(select, items) {
 }
 
 Promise.all([
-    fetch("../data/mice.json").then(res => res.json()),
+    fetch("../data/mice.json?v=20261027-mouse-result-details").then(res => res.json()),
     fetch("../data/keyboards.json").then(res => res.json()),
     fetch("../data/mousepads.json?v=20261027-mousepads-10").then(res => res.json())
 ]).then(([mice, keyboards, mousepads]) => {
