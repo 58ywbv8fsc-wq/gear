@@ -29,6 +29,12 @@ const mousepadList = document.getElementById("currentMousepad");
 
 function addSelectOptions(select, items) {
     items.forEach(item => {
+        const alreadyExists = Array.from(select.options)
+            .some(option => option.value === item.name);
+        if (alreadyExists) {
+            return;
+        }
+
         const option = document.createElement("option");
         option.value = item.name;
         option.textContent = item.name;
