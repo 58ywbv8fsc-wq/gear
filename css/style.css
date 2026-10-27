@@ -1054,3 +1054,75 @@ select{
         min-width:0;
     }
 }
+
+
+/* Mouse profile and specification details on result cards */
+#scoreText{
+    margin:20px 0 8px;
+    font-size:22px;
+    line-height:1.4;
+}
+
+#playerType{
+    margin-bottom:18px;
+    color:#e5e5e5;
+    font-size:18px;
+    line-height:1.6;
+}
+
+#usedMouseSummary{
+    margin:12px 0;
+    color:#aaa;
+    line-height:1.7;
+    overflow-wrap:anywhere;
+}
+
+.mouse-profile-summary{
+    margin:20px 0;
+    padding:16px;
+    border:1px solid #2b2b2b;
+    border-radius:12px;
+    background:#171717;
+    color:#d8d8d8;
+    line-height:1.7;
+    text-align:left;
+    overflow-wrap:anywhere;
+}
+
+.gear-specs{
+    margin-top:12px;
+    padding-top:10px;
+    border-top:1px solid #2b2b2b;
+    color:#c8c8c8;
+    font-size:13px;
+    line-height:1.6;
+    text-align:left;
+    overflow-wrap:anywhere;
+}
+
+.gear-specs p{
+    margin:3px 0;
+}
+
+.gear-card h3{
+    overflow-wrap:anywhere;
+}
+
+@media (max-width:480px){
+    #scoreText{
+        font-size:19px;
+    }
+
+    #playerType{
+        font-size:16px;
+    }
+
+    .mouse-profile-summary{
+        padding:13px;
+        font-size:14px;
+    }
+
+    .gear-specs{
+        font-size:13px;
+    }
+}
